@@ -2,10 +2,12 @@ import pandas as pd
 import numpy as np
 from styleframe import StyleFrame, utils
 
+
 # only select cells whose character have red font, else np.nan
 def only_cells_with_red_text(cell):
     return cell if cell.style.font_color in {utils.colors.red, 'FFFF0000'} else np.nan
     # return cell if not (cell.style.font_color in {utils.colors.red, 'FFFF0000'}) else np.nan
+
 
 # Only select cells whose background is red, else np.nan
 def only_cells_with_red_background(cell):
@@ -18,7 +20,6 @@ sheet_names = pd.ExcelFile('test_excel.xlsx').sheet_names
 
 # Iterate through Excel sheets one by one
 for sheet in sheet_names:
-
     # read current sheet from the Excel file
     sff = StyleFrame.read_excel('test_excel.xlsx', sheet_name=sheet, read_style=True, use_openpyxl_styles=False)
 

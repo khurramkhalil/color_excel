@@ -9,8 +9,8 @@ def only_cells_with_red_text(cell):
 
 
 def only_cells_with_red_background(cell):
-    # return cell if cell.style.bg_color in {utils.colors.red, 'FFFF0000'} else np.nan
-    return cell if not (cell.style.bg_color in {utils.colors.red, 'FFFF0000'}) else np.nan
+    return cell if cell.style.bg_color in {utils.colors.red, 'FFFF0000'} else np.nan
+    # return cell if not (cell.style.bg_color in {utils.colors.red, 'FFFF0000'}) else np.nan
 
 
 sheet_names = pd.ExcelFile('test_excel.xlsx').sheet_names

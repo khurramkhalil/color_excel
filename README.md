@@ -1,2 +1,3 @@
 # color_excel
-Get color infor of each cell in excel file.
+Get color info of each cell in excel file.
+
